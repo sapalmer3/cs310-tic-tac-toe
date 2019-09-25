@@ -183,41 +183,39 @@ public class TicTacToeModel {
         
         // INSERT YOUR CODE HERE
         
-        boolean result = false;
-        
-        //row
-       for (int i = 0; i < width; i++){
+           boolean result = false;
+           for (int i=0; i<width; i++){ // Checks Row
                result = true;
-               for (int j = 0; j < width; j++){
-                   if (board[i][j] != mark);
+               for (int j=0; j<width; j++){
+                   if (board[i][j] != mark)
                    result = false;
                }
                if (result){
                    break;
                }
            }
-        //columns
+
            if (!result){
-            for (int j = 0; j < width; j++){ 
+            for (int j=0; j<width; j++){ // Check Columns
                 result = true;
-                for (int i = 0; i < width; i++){
-                    if (board[j][i] != mark);
-                    result = false;
-                    }  
-                    if (result){
-                        break;
-                    } 
+                for (int i=0; i<width; i++){
+                    if (board[i][j] != mark)
+                        result = false;
+                }                 
+                if (result){
+                    break;
                 }
+            }
            }
-        //diagonal
+
            if (!result){
-           result = true;
+                result = true;
                 for (int i = 0; i < width; ++i){
                     if (board[i][i] != mark){
                         result = false;
-               }
-             
-            }
+                    }
+                }
+ 
             }
             if (!result){
                 result = true;
@@ -225,13 +223,14 @@ public class TicTacToeModel {
                     if (board[(width - 1) - j][j] != mark){
                         result = false;
                     }
-       
                 }
             }
 
-   return result;
-            }
-    
+
+            return result;
+
+
+    }
 	
     private boolean isTie() {
         
