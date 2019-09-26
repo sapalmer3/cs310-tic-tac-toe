@@ -90,7 +90,6 @@ public class TicTacToeModel {
            specified location is valid, make a mark for the current player, then
            toggle "xTurn" from true to false (or vice-versa) to switch to the
            other player before returning TRUE.  Otherwise, return FALSE. */
-
         
            if (isValidSquare(row, col)){
                if (!isSquareMarked(row, col)){
@@ -179,6 +178,8 @@ public class TicTacToeModel {
         
         /* Check the squares of the board to see if the specified mark is the
            winner */
+        
+
         
            boolean result = false;
            for (int i=0; i<width; i++){ //Row
@@ -292,14 +293,16 @@ public class TicTacToeModel {
             output.append(size + " ");
             for (int n = 0; n < width; ++n){
                 output.append(board[j][n]);
-                }
-                output.append("\n");
-                size++;
             }
+            output.append("\n");
+            size++;
+        }
         
+        output.append("\n");
         
         return output.toString();
         
     }
     
 }
+

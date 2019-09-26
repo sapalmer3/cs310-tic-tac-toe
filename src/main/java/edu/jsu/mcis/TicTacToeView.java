@@ -31,7 +31,7 @@ public class TicTacToeView {
             System.out.println("Player O turn:  ");
         }
         
-        System.out.println("Please enter your desired row and column with a single space between: ");
+        System.out.println("Please enter your desired row and column with a single space between:  ");
         
         row = keyboard.nextInt();
         col = keyboard.nextInt();
@@ -61,3 +61,4 @@ public class TicTacToeView {
     }
 	
 }
+
